@@ -1,11 +1,12 @@
-import express from "express";
-import cors from "cors";
+import * as express from "express";
+import * as cors from "cors";
 import {
   OngRoutes,
   IncidentRoutes,
   ProfileRoutes,
   SessionRoutes,
 } from "../routes/routes";
+import { errors } from "celebrate";
 
 class App {
   public express: express.Application;
@@ -15,6 +16,7 @@ class App {
 
     this.middleware();
     this.routes();
+    this.express.use(errors());
   }
 
   middleware() {
