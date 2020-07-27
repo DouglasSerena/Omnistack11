@@ -4,7 +4,8 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.ts"
+    "dev": "nodemon src/server.ts",
+    "start": "sucrase-node src/server.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
